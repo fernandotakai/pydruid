@@ -16,7 +16,7 @@
 from __future__ import division
 
 
-class Postaggregator:
+class Postaggregator(object):
 
     def __init__(self, fn, fields, name):
 
@@ -68,11 +68,9 @@ class Const(Postaggregator):
             'type': 'constant', 'name': name, 'value': value}
         self.name = name
 
-
 def build_post_aggregators(postaggs):
     return [rename_postagg(new_name, postagg.post_aggregator)
             for (new_name, postagg) in postaggs.iteritems()]
-
 
 def rename_postagg(new_name, post_aggregator):
     post_aggregator['name'] = new_name

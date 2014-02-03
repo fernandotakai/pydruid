@@ -21,7 +21,7 @@ import cStringIO
 # this is necessary because the values in druid are not all ASCII.
 
 
-class UnicodeWriter:
+class UnicodeWriter(object):
 
     # delimiter="\t"
     def __init__(self, f, dialect="excel-tab", encoding="utf-8", **kwds):

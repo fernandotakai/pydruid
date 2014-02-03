@@ -12,10 +12,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
+import simplejson as json
 
-class Filter:
+class Filter(object):
 
     def __init__(self, **args):
 
@@ -54,7 +54,7 @@ class Filter:
         return Filter(type="not", field=self.filter['filter'])
 
 
-class Dimension:
+class Dimension(object):
 
     def __init__(self, dim):
         self.dimension = dim
